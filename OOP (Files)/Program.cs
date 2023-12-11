@@ -15,7 +15,7 @@ while ((pointer = readNow.ReadLine()) != null)
     {
         charactersNumber += word.Replace(" ","").Length;
     }
-    for (int i=0;i<wordsInLine.Length-1 ;i++)
+    for (int i=0;i<wordsInLine.Length ;i++)
     {
         if (wordsInLine[i].Trim().Contains(" "))
         {
@@ -26,12 +26,11 @@ while ((pointer = readNow.ReadLine()) != null)
         }
         else
             wordsNumber++;
-        
-        
     }
 
     Console.WriteLine(pointer);
+    wordsNumber--;
 }
-Console.WriteLine($"The number of characters without spaces in file ={charactersNumber}");
-Console.WriteLine($"The number of words without spaces in file ={wordsNumber}");
+Console.WriteLine($"\nThe number of characters without spaces in file = {charactersNumber}");
+Console.WriteLine($"The number of words without spaces in file = {wordsNumber}");
 
